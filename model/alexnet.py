@@ -31,7 +31,7 @@ class alexnet(AlexNet):
 
     def forward(self,x):
         x = self.features(x)
-        x = self.x = self.avgpool(x)
+        x = self.avgpool(x)
         x = torch.flatten(x, 1)
         x = self.classifier(x)
         x = self.outFc(x)
